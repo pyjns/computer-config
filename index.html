@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self' data: https:;">
+  <meta http-equiv="X-Content-Security-Policy"
+    content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self' data: https:;">
+  <title>笔记本检测</title>
+  <style>
+    body {
+      background-color: #F0F0F0;
+    }
+
+    .contentWrap {
+      position: relative;
+      /* padding: 5px 15px; */
+    }
+
+    #output p{
+      display: flex;
+    }
+
+    #output p span {
+      display: inline-block;
+      text-align: top;
+      width: 60px;
+    }
+
+    #qrcodeWrap {
+      display: block;
+      position: absolute;
+      z-index: 100;
+      right: 20px;
+      top: 50px;
+      width: 300px;
+      height: 300px;
+    }
+
+    .outputWrap {
+      width: 500px;
+      /* border: solid 1px red; */
+    }
+    .outputWrap .ouput{
+      /* border: solid 1px blue; */
+      /* display: flex; */
+    }
+    .outputWrap .ouput .title{
+      /* flex:0 0 80px; */
+      /* border: solid 1px red; */
+    }
+    .outputWrap .ouput .content{
+      /* display: flex; */
+      /* flex-wrap: wrap; */
+      padding-left: 20px;
+    }
+    .outputWrap .ouput .content .itemWrap+.itemWrap{
+      margin-top:10px;
+    }
+    .outputWrap .ouput .content .item{
+      /* min-width: 50%; */
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="contentWrap">
+    <div id="outputWrap" class="outputWrap">
+      <!-- <div class="ouput">
+        <div class="title">lable1</div>
+        <div class="content">XXXXXX</div>
+      </div> -->
+    </div>
+    <div id="output"></div>
+    <div id="qrcodeWrap"></div>
+  </div>
+</body>
+
+</html>

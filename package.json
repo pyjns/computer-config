@@ -1,0 +1,40 @@
+{
+  "name": "computer-config",
+  "version": "1.0.0",
+  "description": "computer-config",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "Win32": "electron-builder --win --ia32",
+    "Win64": "electron-builder --win --x64",
+    "Mac": "electron-builder --mac",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "clean": "electron-builder"
+  },
+  "author": "pengyajuan",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^19.0.0",
+    "electron-builder": "^23.0.3"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "iconv-lite": "^0.6.3",
+    "qrcode": "^1.5.0",
+    "xml2js": "^0.4.16"
+  },
+  "build": {
+    "productName": "computer-config",
+    "appId": "com.computer-config",
+    "directories": {
+      "output": "build"
+    },
+    "mac": {
+      "icon": "./logo.jpg"
+    },
+    "win": {
+      "icon": "./logo.jpg"
+    }
+  }
+}
